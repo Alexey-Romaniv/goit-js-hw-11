@@ -1,12 +1,19 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
   gap: 20px;
+
+  margin-top: 30px;
+  text-align: center;
 }
 
 .info {
   display: flex;
   gap: 5px;
+  justify-content: space-around;
 }
 
 b {
@@ -15,4 +22,39 @@ b {
 
 .load-more {
   display: none;
+  width: 150px;
+  height: 75px;
+  background-color: navy;
+  color: aliceblue;
+  border-radius: 4px;
+  font-size: 25px;
+  border: none;
+  margin: 0 auto;
+}
+
+.search-form {
+  position: sticky;
+  background-color: yellowgreen;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.search-form input {
+  border-radius: 4px;
+  height: 50px;
+  width: 300px;
+  font-size: 40px;
+}
+.search-form button {
+  border-radius: 50%;
+  background-color: aliceblue;
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+button {
+  cursor: pointer;
 }

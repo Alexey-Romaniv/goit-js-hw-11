@@ -8,7 +8,7 @@ export async function searchImages(search, page, gallery, loadMore) {
   const per_page = 40;
   try {
     const res = await axios.get(
-      `${BASE_URL}?key=29839471-7dd87ec03b57b90ea35b79230&q=${search}&page=${page}image_type=photo&orietation=horizontal&safesearch=true&per_page=${per_page}`
+      `${BASE_URL}?key=29839471-7dd87ec03b57b90ea35b79230&q=${search}&page=${page}&image_type=photo&orietation=horizontal&safesearch=true&per_page=${per_page}`
     );
     console.log(res);
 
@@ -30,7 +30,7 @@ export async function searchImages(search, page, gallery, loadMore) {
           comments,
           downloads,
         }) => `<div class="photo-card">
-        <a href='${largeImageURL}'><img  src="${webformatURL}" alt="${tags}" loading="lazy" width='250' height='166'/></a>
+        <a href='${largeImageURL}'><img  src="${webformatURL}" alt="${tags}" loading="lazy" width='300' height=''/></a>
         <div class="info">
           <p class="info-item">
           <b>Likes</b> ${likes}

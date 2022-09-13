@@ -15,12 +15,15 @@ const lightbox = new SimpleLightbox('.gallery a', {
 });
 let page = 1;
 
-const search = '';
+let search = '';
 async function getArrayGallery(e) {
   e.preventDefault();
-
-  const search = searchForm.elements.searchQuery.value;
+  page = 1;
+  search = searchForm.elements.searchQuery.value;
   gallery.innerHTML = '';
+  if (!search) {
+    return;
+  }
   searchImages(search, page, gallery, morePhotoBtn);
   lightbox.refresh();
 }
@@ -28,6 +31,7 @@ async function getArrayGallery(e) {
 function searchMore() {
   page += 1;
   searchImages(search, page, gallery, morePhotoBtn);
+  lightbox.refresh();
 }
 // let infScroll = new InfiniteScroll(gallery, {
 //   // options
