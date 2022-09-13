@@ -2,9 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
   gap: 20px;
+
+  padding-top: 150px;
 
   margin-top: 30px;
   text-align: center;
@@ -33,7 +35,9 @@ b {
 }
 
 .search-form {
-  position: sticky;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: yellowgreen;
   width: 100%;
   height: 100px;
